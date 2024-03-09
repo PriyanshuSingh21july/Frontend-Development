@@ -1,0 +1,49 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+<body>
+               <script>
+
+               console.log("Start");
+               setTimeout(function(){
+                              console.log("I'am Developer");
+               },5000);
+               console.log("End");
+
+
+               </script>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions</h1>
+<h2>Function Sequence</h2>
+<p>JavaScript functions are executed in the sequence they are called.</p>
+
+<p>The result of the calculation is:</p>
+<p id="demo"></p>
+
+<script>
+function sum(a, b) {
+  console.log(a + b);
+}
+
+function calculation(a, b, sumCallback) {
+  sumCallback(a, b);
+}
+
+calculation(1, 3, sum);
+</script>
+
+</body>
+</html>
