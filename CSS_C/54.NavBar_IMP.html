@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        /*  universal css */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* bady section      */
+        body {
+            background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/1e064798501323.5eddf372976d0.png");
+            background-size: cover;
+            /* Cover the entire viewport */
+            background-position: center;
+            /* Center the background image */
+            background-repeat: no-repeat;
+            /* Do not repeat the background image */
+            margin: 0px;
+            /* Remove default margin */
+
+        }
+
+        /*   Nav bar start           */
+
+        nav {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            /* Add background color for the navigation bar */
+        }
+
+        li:hover {
+            color: aquamarine;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            margin: 0 30px;
+            /*  margin b/w nav bar   */
+        }
+
+        /*   Nav bar end css            */
+
+        img {
+            width: 100px;
+            /* Adjust the width as needed */
+            height: auto;
+            /* Maintain the aspect ratio */
+        }
+
+        /* Add style for the search icon */
+        .search-icon {
+            width: 300px;
+            height: 20px;
+            background: url('path-to-your-search-icon.png') center/cover;
+            cursor: pointer;
+        }
+
+        /* Style the search input */
+        input[type="search"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Home icon */
+        .fa-home {
+            font-size: 30px;
+            /* Adjust the font size as needed */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><img src="https://1000logos.net/wp-content/uploads/2021/02/Flipkart-Logo-2007.png" alt=""></li>
+            <li><i class="fas fa-home"></i></li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Login</li>
+            <li>Signup</li>
+            <li>Media</li>
+            <li><input type="search" placeholder="Search" class="search-icon"></li>
+            <li class="logout"></li>
+        </ul>
+    </nav>
+
+    <div class="pic">
+        <img src="mainimf.webp" alt="" width="500px" height="100%">
+    </div>
+
+</body>
+
+</html>
+
+
+
+<!--
+
+
+    for font incon
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">attach this link in head tage
+    then go <font awosome.com website copy  link>
+
+
+-->
