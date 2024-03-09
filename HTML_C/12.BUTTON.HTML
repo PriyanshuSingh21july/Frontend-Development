@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      button {
+         border-radius: 8px;
+         background-color: aqua;
+      }
+   </style>
+</head>
+
+<body>
+   <!--  1.-->
+   <button name="button" value="ok" onclick="hello()">Click here</button>
+
+   <script>
+      function hello() {
+         alert("Good morning everyone");
+      }
+   </script>
+   <br><br>
+
+   <!-- 2.  Button submit -->
+   <button>Submit</button>
+   <br> <br>
+
+
+   <!-- 3. Button hello-->
+   <button name="button" value="ok" onclick="Vote()">Let's Eligibility</button>
+   <script>
+      function Vote() {
+         let age = prompt("Enter age :");
+         if (age > 18) {
+            document.write("Vote");
+         }
+         else {
+            document.write("Not Vote");
+         }
+      }
+
+   </script>
+   <br><br>
+
+
+   <!--Button 4 -->
+
+   <button onclick="openGoogle()" style="background-color: red; text-align: center; text-decoration: green;">Open
+      Google</button>
+
+   <script>
+      function openGoogle() {
+         window.open('https://www.google.com', '_blank');
+      }
+   </script>
+   <br><br>
+
+
+
+   <!-- Button 5-->
+   <button onclick="java()"  style="background-color: chartreuse;">JavaTpoint</button>
+   <script>
+      function java() {
+         window.open('https://www.javatpoint.com/','_blank');
+
+      }
+   </script>
+</body>
+
+</html>
