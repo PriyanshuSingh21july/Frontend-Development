@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+
+               <script>
+                              // Example functions
+                              const add = x => x + 5;
+                              const multiply = x => x * 2;
+                              const subtract = x => x - 3;
+
+                              // Function composition
+                              const composedFunction = x => subtract(multiply(add(x)));
+
+                              // Example usage
+                              const result = composedFunction(10);
+
+                              console.log(result); // Output: (10 + 5) * 2 - 3 = 22
+
+               </script>
+
+</body>
+
+</html>
