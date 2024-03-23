@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+               <script>
+
+               //        1
+                              // message = "Good Global";
+
+                              // function hello1() {
+                              //                message = "Good morning";
+                              //                console.log("Hello" + message)
+                              // }
+                              // hello1()
+
+
+
+                              //2
+
+                              // function outer() {
+                              //                let usename = "Priyanshu";
+                              //                // return usename;
+
+                              //                function inner()
+                              //                {
+                              //                               let secrate="123AFD"
+                              //                           console.log("Inner"+usename)    
+                              //                }
+                              //                function Twoinner()
+                              //                {
+                              //                               console.log(secrate)
+                              //                           console.log("Inner"+usename)    
+                              //                }
+                              //                inner()
+                              //                Twoinner()
+                              // }
+
+                              // outer()
+                              // console.log("Outer",usename); // Outputs: Priyanshu
+
+
+
+
+                              // 3.
+                              function outerFunction() {
+                                             let outerVariable = 'I am from the outer function';
+
+                                             function innerFunction() {
+                                                            console.log(outerVariable); // Accessing outerVariable from the outer scope
+                                             }
+
+                                             // Return the inner function
+                                             return innerFunction;
+                              }
+
+                              // Assigning the returned inner function to a variable
+                              let closureExample = outerFunction();
+
+                              // Even though outerFunction has finished executing, the innerFunction still has access to the outerVariable
+                              closureExample(); // Output: I am from the outer function
+
+
+
+
+                           // 4.example
+                           function outerfun(a){
+                              let b=30;
+                              function innerfun()
+                              {
+                                             let sum= a+b;
+                                             console.log("Add 2 number:"+sum);
+                              }
+                              innerfun();
+                           }
+                           outerfun(10);
+
+
+
+
+
+               </script>
+</body>
+
+</html>
+
+
+<!-- 
+Closure:
+closure in action that is inner function can have acess to the outer function variable/parameter 
+as well as global variable -->

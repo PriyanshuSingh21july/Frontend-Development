@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+
+               <script>
+                              function checkNumber(num) {
+                                             if (typeof num !== 'number') {
+                                                            throw new Error('Input must be a number');
+                                             }
+
+                                             if (num < 0) {
+                                                            throw new RangeError('Number must be non-negative');
+                                             }
+
+                                             return Math.sqrt(num);
+                              }
+
+                              try {
+                                             console.log(checkNumber(25));  // Output: 5
+                                             console.log(checkNumber('abc'));  // This will throw an Error
+                                             console.log(checkNumber(-10));  // This will throw a RangeError
+                              } catch (error) {
+                                             console.error('An error occurred:', error.message);
+                              }
+
+               </script>
+</body>
+
+</html>

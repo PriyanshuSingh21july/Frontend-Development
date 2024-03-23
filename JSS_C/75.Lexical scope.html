@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+               <script>
+                              function outerFunction() {
+                                             var outerVar = 'I am in outer scope';
+
+                                             function innerFunction() {
+                                                            console.log(outerVar); // Access outerVar from outer scope
+                                             }
+
+                                             innerFunction();
+                              }
+
+                              outerFunction(); // Output: I am in outer scope
+
+               </script>
+</body>
+
+</html>

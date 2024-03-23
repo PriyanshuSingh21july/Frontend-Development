@@ -1,0 +1,60 @@
+<!-- Type pf conversion :
+. String
+. Boolean
+. Number -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+               <script>
+                              let str = "123";
+                              let num = Number(str);
+                              console.log(num); // Output: 123 (number)
+
+               </script>
+
+               <script>
+                              let num1 = 456;
+                              let str1 = num1.toString();
+                              console.log(str1); // Output: "456" (string)
+
+               </script>
+
+               <script>
+                              let bool = true;
+                              let str2 = String(bool);
+                              console.log(str2); // Output: "true" (string)
+
+               </script>
+
+               <script>
+                              let str3 = "false";
+                              let bool1 = Boolean(str3);
+                              console.log(bool1); // Output: true (boolean)
+
+               </script>
+
+               <script>
+                              let num4 = 0;
+                              let bool2 = Boolean(num4);
+                              console.log(bool2); // Output: false (boolean)
+
+               </script>
+
+               <script>
+                              let bool5 = true;
+                              let num7 = Number(bool5);
+                              console.log(num7); // Output: 1 (number)
+
+               </script>
+
+</body>
+
+</html>

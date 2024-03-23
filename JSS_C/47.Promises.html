@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+
+   <script>
+
+      //1
+      let promise = new Promise(function (accept, reject) {
+         alert("Hello")
+         accept(2003)
+
+      })
+      console.log("hello")
+      setTimeout(function () {
+         console.log("Good morning!");
+      }, 3000);
+      console.log("End");
+      console.log(promise);
+
+
+      // 2
+      var promise1 = new Promise(function (resolve, reject) {
+         setTimeout(function () {
+            console.log("Async task");
+            resolve(); // Changed 'accept' to 'resolve'
+         }, 2000);
+      });
+
+      promise1.then(function () {
+         console.log("Promise consumed");
+      });
+
+
+      // 3
+      new Promise(function (resolve, reject) {
+         setTimeout(function () {
+            console.log("Async task2");
+            resolve(); // Changed 'accept' to 'resolve'
+         }, 2000);
+      }).then(function () {
+         console.log("Async2 calling")
+      });
+
+
+      // 4.
+      const promisefour = new Promise(function (resolve, reject) {
+         setTimeout(function () {
+            resolve({ "Username": "Priyanshu", "Password": "!@#$TSA" }); // corrected syntax of object
+         }, 2000);
+      });
+
+      promisefour.then(function (data) {
+         console.log(data); // accessing the resolved data
+      });
+
+
+      //5
+
+      const promisefive = new Promise(function (resolve, reject) {
+         setTimeout(function () {
+            resolve({ "Username": "Priyanshu singh", "Password": "!@#$TSA" });
+         }, 2000);
+      });
+
+      promisefive
+         .then(function (data) {
+            console.log(data); // accessing the resolved data
+         })
+         .catch(function (error) {
+            console.error('Error occurred:', error); // handling errors
+         })
+         .finally(function () {
+            console.log('Promise settled (completed).'); // finally block executed regardless of success or failure
+         });
+
+
+      // 6.erro occur
+      const promisesix = new Promise(function (resolve, reject) {
+         setTimeout(function () {
+            // Intentionally throwing an error here
+            try {
+               throw new Error("Simulated error occurred.");
+            } catch (error) {
+               reject(error);
+            }
+         }, 2000);
+      });
+
+      promisesix
+         .then(function (data) {
+            console.log(data); // accessing the resolved data
+         })
+         .catch(function (error) {
+            console.error('Error occurred:', error.message); // handling errors
+         })
+         .finally(function () {
+            console.log('Promise settled (completed).'); // finally block executed regardless of success or failure
+         });
+
+
+
+      // 7.aync wait error handling
+
+      const promiseseven = new Promise(function (resolve, reject) {
+         setTimeout(function () {
+            // Intentionally throwing an error here
+            try {
+               throw new Error("Simulated error occurred.");
+            } catch (error) {
+               reject(error);
+            }
+         }, 2000);
+      });
+
+      async function handlePromise() {
+         try {
+            const data = await promiseseven;
+            console.log(data); // This won't execute in case of an error
+         } catch (error) {
+            console.error('Error occurred:', error.message); // Handling errors using try/catch
+         } finally {
+            console.log('Promise settled (completed).'); // Finally block executed regardless of success or failure
+         }
+      }
+
+      handlePromise();
+
+   </script>
+</body>
+
+</html>

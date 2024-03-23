@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+               <script>
+                              //    Example of a variable in global scope:
+
+
+                              var globalVar = 10;
+
+                              function myFunction() {
+                                             console.log(globalVar); // Accessible within the function
+                              }
+
+                              console.log(globalVar); // Accessible outside the function
+
+               </script>
+
+
+
+               <script>
+                              //local variable
+                              function myFunction() {
+                                             var localVar = 20;
+                                             console.log(localVar); // Accessible within the function
+                              }
+
+                              myFunction();
+                              console.log(localVar); // Error: localVar is not defined
+
+
+               </script>
+
+
+
+               <script>
+                              // local and global
+
+                              var outerVar = 30;
+
+                              function outerFunction() {
+                                             var innerVar = 40;
+
+                                             function innerFunction() {
+                                                            console.log(innerVar); // Accessible inside inner function
+                                                            console.log(outerVar); // Accessible inside inner function
+                                             }
+
+                                             innerFunction();
+                                             console.log(innerVar); // Error: innerVar is not defined outside inner function
+                              }
+
+                              outerFunction();
+                              console.log(outerVar); // Accessible outside of outer function
+
+               </script>
+
+</body>
+
+</html>

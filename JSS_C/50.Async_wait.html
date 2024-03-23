@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData() {
+            // Simulate fetching data from an asynchronous source
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve("Data fetched successfully");
+                }, 2000); // Simulating a 2-second delay
+            });
+        }
+
+        async function main(){
+            console.log("Loading modules");
+
+            console.log("Do something else");
+
+            console.log("Load data");
+
+            let data = await getData();
+
+            console.log(data);
+
+            console.log("process data");
+
+            console.log("task 2");
+        }
+
+        main();
+    </script>
+
+
+<script>
+      async function getData() {
+           return new Promise(resolve => {
+               setTimeout(() => {
+                   console.log("Async await function");
+                   resolve("Data from async function"); // Resolve the Promise after the timeout
+               }, 5000);
+           });
+       }
+       
+       async function main() {
+           console.log("Start point");
+           console.log("Middle line");
+           let data = await getData();
+           console.log(data);
+           console.log("Ending line");
+       }
+       
+       main();
+       
+    </script>
+</body>
+</html>
+

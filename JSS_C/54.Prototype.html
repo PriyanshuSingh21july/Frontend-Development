@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // function constructor 
+        function Person(name, job, yearOfBirth) {
+            this.name = name;
+            this.job = job;
+            this.yearOfBirth = yearOfBirth;
+        }
+        // this will show Person's prototype property. 
+        console.log(Person.prototype);
+
+
+        console.log("************another example**********************")
+        // Define a constructor function for creating Car objects
+        function Car(make, model, year) {
+            // Initialize properties
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        // Add a method to the Car prototype
+        Car.prototype.start = function () {
+            return "The " + this.make + " " + this.model + " is starting.";
+        };
+
+        // Create instances of Car
+        var car1 = new Car("Toyota", "Camry", 2020);
+        var car2 = new Car("Honda", "Civic", 2018);
+
+        // Call the start method on car1
+        console.log(car1.start()); // Output: The Toyota Camry is starting.
+
+        // Call the start method on car2
+        console.log(car2.start()); // Output: The Honda Civic is starting.
+
+
+    </script>
+
+
+</body>
+
+</html>

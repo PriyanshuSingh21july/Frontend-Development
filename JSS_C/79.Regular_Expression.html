@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+               <script>
+                              // Creating a regular expression to match email addresses
+                              const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                      
+                              // Asking the user to enter an email address
+                              let str = prompt("Please enter your email address:");
+                      
+                              // Testing if the entered string matches the regular expression
+                              if (emailRegex.test(str)) {
+                                  console.log("Valid email address");
+                                  alert("Valid email address");
+                              } else {
+                                  console.log("Invalid email address");
+                                  alert("Invalid email address");
+                              }
+                          </script>
+</body>
+
+</html>
